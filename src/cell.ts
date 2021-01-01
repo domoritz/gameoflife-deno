@@ -17,7 +17,7 @@ export class Cell {
   }
 
   neighbors() {
-    let nbs: Cell[] = [];
+    const nbs: Cell[] = [];
 
     for (let y = this.y - 1; y <= this.y + 1; y++) {
       for (let x = this.x - 1; x <= this.x + 1; x++) {
