@@ -1,4 +1,4 @@
-# Conway's Game of Life in TypeScript
+# Conway's Game of Life in TypeScript ![Deno](https://github.com/domoritz/gameoflife-deno/workflows/Deno/badge.svg)
 
 Implementation of Conway's Game of Life in an infinite space in TypeScript in Deno. Alive cells are stored in a set. To calculate the next iteration, we compute the number of neighbors for each cell that has neighbors.
 
