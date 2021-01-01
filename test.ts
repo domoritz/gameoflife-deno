@@ -1,5 +1,6 @@
 import {
   assert,
+  assertArrayIncludes,
   assertEquals,
   assertNotEquals,
 } from "https://deno.land/std@0.83.0/testing/asserts.ts";
@@ -25,6 +26,24 @@ Deno.test("Cells work in sets as strings", () => {
   set.add(a.toString());
   assert(set.has(a.toString()));
   assert(set.has(b.toString()));
+});
+
+Deno.test("Get cell neighbors", () => {
+  const c = new Cell(-1, 2);
+
+  assertArrayIncludes(
+    c.neighbors(),
+    [
+      new Cell(-2, 1),
+      new Cell(-2, 2),
+      new Cell(-2, 2),
+      new Cell(-1, 1),
+      new Cell(-2, 3),
+      new Cell(0, 1),
+      new Cell(0, 2),
+      new Cell(0, 3),
+    ],
+  );
 });
 
 Deno.test("New board is empty", () => {
